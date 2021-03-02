@@ -1,0 +1,20 @@
+.code-toolbar{
+    max-width: 810px;
+    margin: 0 auto 35px;
+    overflow: auto;
+    font-size: 15px;
+
+    pre{
+      background-color: #292c34!important;
+
+      code{
+        color: white;
+      }
+    }
+
+    .toolbar-item{
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+}
