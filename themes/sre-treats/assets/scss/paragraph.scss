@@ -16,23 +16,9 @@ p b {
 }
 
 /*DESKTOP*/
-@media screen and (max-width: 1070px){
+@media screen and (max-width: $desktop){
     p{
-        max-width: 507px;
+        max-width: 600px;
     }
 }
 
-/*TABLET*/
-@media screen and (max-width: 735px){
-    p{
-        max-width: 486px;
-        margin: 0 auto 25px;
-    }
-}
-
-/*PHABLET*/
-@media screen and (max-width: 540px){
-    p{
-        padding: 0 20px;
-    }
-}

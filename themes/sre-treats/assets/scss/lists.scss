@@ -8,6 +8,13 @@ ol, ul{
     font-size: 18px;
     width: 100%;
     max-width: 810px;
+
+    @media screen and (max-width: $desktop){
+        max-width: 600px;
+    }
+    @media screen and (max-width: $tablet){
+        max-width: 550px;
+    }
 }
 
 ol > li, ul > li {
@@ -28,78 +35,4 @@ li > p {
 
 li > p:last-of-type {
     margin-bottom: 0px;
-}
-
-/*TABLET*/
-@media screen and (max-width: 735px){
-    ul{
-        max-width: 486px;
-        padding-left: 0px;
-    }
-}
-
-/*PHABLET*/
-@media screen and (max-width: 540px){
-    ul{
-        padding-left: 20px;
-    }
-}
-
-
-/*TABLET*/
-@media screen and (max-width: 735px){
-    ul li{
-        padding-left: 30px;
-    }
-
-    ul li p{
-        padding: 0;
-    }
-}
-
-/*PHABLET*/
-@media screen and (max-width: 540px){
-    ul li{
-        padding-left: 30px;
-    }
-}
-
-/*DESKTOP*/
-@media screen and (max-width: 1070px){
-    ol{
-        max-width: 507px;
-    }
-}
-/*TABLET*/
-@media screen and (max-width: 735px){
-    ol{
-        max-width: 486px;
-        padding-left: 0px;
-    }
-}
-
-/*PHABLET*/
-@media screen and (max-width: 540px){
-    ol{
-        padding-left: 20px;
-    }
-}
-
-
-/*TABLET*/
-@media screen and (max-width: 735px){
-    ol li{
-        padding-left: 30px;
-        padding: 0;
-    }
-    ol li p{
-        padding-left: 30px;
-    }
-}
-
-/*PHABLET*/
-@media screen and (max-width: 540px){
-    ol li{
-        padding-left: 30px;
-    }
 }

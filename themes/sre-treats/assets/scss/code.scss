@@ -17,4 +17,11 @@
       top: 1em;
       right: 1em;
     }
+
+  @media screen and (max-width: $desktop){
+    max-width: 600px;
+  }
+  @media screen and (max-width: $tablet){
+    max-width: 550px;
+  }
 }

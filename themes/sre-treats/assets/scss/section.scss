@@ -15,23 +15,14 @@
         padding: 2rem;;
     }
 
-    p{
-        /*TABLET*/
-        @media screen and (max-width: 735px){
-            padding: 0 4rem;
-            max-width: 567px;
-        }
-    }
-
     
 }
 
 .narrow{
     p{
         /*TABLET*/
-        @media screen and (max-width: 735px){
-            padding: 0 2rem;
-            max-width: 527px;
+        @media screen and (max-width: $tablet){
+            max-width: 550px;
         }
     }
     

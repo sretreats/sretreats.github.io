@@ -5,6 +5,7 @@ hero: "/images/posts/linux-know-how-sres.jpg"
 excerpt: Linux know how, that must be known by SREs
 authors:
   - Hemant Negi
+  - Hdev
 
 ---
 

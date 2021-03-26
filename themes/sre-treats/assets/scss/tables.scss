@@ -20,21 +20,17 @@ table{
     tr:nth-child(2n) > td {
         background: var(--tableEvenRow);
     }
-}
 
-/*DESKTOP*/
-@media screen and (max-width: 1070px){
-    table{
+    @media screen and (max-width: $desktop){
+        max-width: 600px;
         margin: 25px auto 65px;
     }
-}
-
-/*TABLET*/
-@media screen and (max-width: 735px){
-    table{
-        max-width: 486px;
+    @media screen and (max-width: $tablet){
+        max-width: 550px;
     }
 }
+
+
 
 /*PHABLET*/
 @media screen and (max-width: 540px){
@@ -44,35 +40,6 @@ table{
 }
 
 /*************************************TABLE CELL************************************/
-
-td{
-    border-top: 1px solid var(--horizontalRule);
-    border-right: 1px solid var(--horizontalRule);
-    padding: 8px 15px;
-    font-size: 16px;
-    background: var(--card);
-
-    &:last-child {
-        border-right: none;
-    }
-}
-
-/*DESKTOP*/
-@media screen and (max-width: 1070px){
-    td{
-        padding: 14px 20px;
-    }
-}
-
-/*TABLET*/
-@media screen and (max-width: 735px){
-    td{
-        font-size: 14px;
-    }
-}
-
-/*************************************TABLE HEAD************************************/
-
 thead{
     text-align: left;
     border-collapse: collapse;
@@ -96,17 +63,28 @@ th{
     }
 }
 
+td{
+    border-top: 1px solid var(--horizontalRule);
+    border-right: 1px solid var(--horizontalRule);
+    padding: 8px 15px;
+    font-size: 16px;
+    background: var(--card);
+
+    &:last-child {
+        border-right: none;
+    }
+}
 
 /*DESKTOP*/
-@media screen and (max-width: 1070px){
-    th{
-        padding: 14px 20px;
+@media screen and (max-width: $desktop){
+    td, th{
+        padding: 6px 10px;
     }
 }
 
 /*TABLET*/
-@media screen and (max-width: 735px){
-    th{
+@media screen and (max-width: $tablet){
+    td, th{
         font-size: 14px;
     }
 }

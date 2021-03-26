@@ -41,37 +41,52 @@
     @media screen and (max-width: $phablet){
         margin-left: 0;
         flex-direction: column;
+        width: 100%;
+
+        .article-date{
+            display: block;
+            padding-left: 40px;
+            font-size: 13px;
+        }
+        .article-date.multiple{
+            padding-left: 0px;
+        }
     }
 }
 
 .article-header{
     position: relative;
     z-index: 10;
-    margin:100px auto 120px;
+    margin:100px auto 100px;
     padding-left: 0;
     max-width: 810px;
   
     @media screen and (max-width: $desktop){
-        padding-left: 53px;
-        max-width: calc(507px + 53px);
+        max-width: 600px;
         margin: 100px auto 70px;
     }
 
     @media screen and (max-width: $tablet){
-        padding-left: 0;
         margin: 100px auto 70px;
-        max-width: 480px;
+        max-width: 550px;
     }
 
     @media screen and (max-width: $phablet){
-        margin: 170px auto 180px;
-        padding: 0 40px;
-    }
-  
-    @media screen and (max-height: 700px) {
-      margin: 100px auto;
+        margin: 40px auto;
     }
 }
+
+.wide-section{
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 4rem;
+
+    @media screen and (max-width: $tablet){
+        padding: 0;
+    }
+}
+
 
 .article-hero-heading{
     font-size: 48px;
@@ -102,37 +117,22 @@
     font-size: 18px;
     color: var(--grey);
 
-    /*PHABLET*/
-    @media screen and (max-width: $phablet){
-        border: 1px solid var(--horizontalRule);
-        border-radius: 5px;
-    }
-  
-    @media screen and(max-width: $phablet){
-        font-size: 14px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-
-        &.has-coauthors::before{
-            content: '';
-            position: absolute;
-            left: -20px;
-            right: -20px;
-            top: -10px;
-            bottom: -10px;
-            border: 1px solid var(--horizontalRule);
-            opacity: 0.5;
-            border-radius: 5px;
-        }
-
+    @media screen and(max-width: $tablet){
+        padding: 10px 0;
         strong {
             display: block;
             font-weight: 500;
-            margin-bottom: 5px;
         }
     }
+
+    @media screen and(max-width: $phablet){
+        font-size: 15px;
+        strong {
+            display: block;
+            font-weight: 500;
+        }
+    }
+
 }
 
 .article-hero-image{
@@ -151,25 +151,8 @@
         width: 100%;
     }
 
-    /*DESKTOP MEDIUM*/
     @media screen and (max-width: $desktop_medium){
         position: relative;
-    }
-  
-    /*TABLET*/
-    @media screen and (max-width: $tablet){
-        max-width: 100%;
-    }
-
-    /*PHABLET*/
-    @media screen and (max-width: phablet){
-        margin: 0 auto;
-        width: calc(100vw - 40px);
-        height: 220px;
-    
-        & > div {
-          height: 220px;
-        }
     }
 }
 
@@ -212,6 +195,11 @@
         border-radius: 50%;
     }
 
+    @media screen and (max-width: $phablet){
+        &::after{
+            top:6px;
+        }
+    }
 }
 
 .article-author-avatar{
@@ -230,10 +218,8 @@
     .gatsby-image-wrapper > div {
       padding-bottom: 100% !important;
     }
-  
-    /*PHABLET*/
     @media screen and (max-width: $phablet){
-        display: none;
+        top:8px
     }
 }
 
@@ -256,6 +242,10 @@
     font-size: 18px;
     color: var(--grey);
     cursor: pointer;
+
+    svg {
+        opacity: 0.6;
+    }
   
     &::before {
       content: "";
@@ -293,8 +283,10 @@
           bottom: -30px;
           background: transparent;
         }
-    
-    
+        .article-coauthors-list{
+            display: none;
+        }
+
         strong {
           display: block;
           font-weight: semi-bold;
@@ -302,6 +294,7 @@
         }
     }
 }
+
 
 .article-coauthors-collapsed{
     display: -webkit-box;
@@ -314,11 +307,6 @@
     height: 25px;
     margin-right: 15px;
     margin-left: 15px;
-
-    /*PHABLET*/
-    @media screen and (max-width: $phablet){
-        display: none;
-    }
 }
 
 .article-coauthors-avatar{
@@ -341,11 +329,7 @@
     img{
         width: 100%;
     }
-  
-    /*PHABLET*/
-    @media screen and (max-width: $phablet){
-        display: none;
-    }
+
 }
 
 .article-coauthors-name-container{
@@ -386,7 +370,7 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        top: 10px;
+        top: 0px;
         height: 100%;
     }
 
@@ -397,8 +381,8 @@
     z-index: 2;
     left: -21px;
     right: -21px;
-    top: -19px;
-    padding: 21px;
+    top: -14px;
+    padding: 16px 25px 16px 16px;
     background: var(--card);
     -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -418,9 +402,8 @@
 .article-icon-open-container{
     position: absolute;
     cursor: pointer;
-    top: 25px;
+    top: 20px;
     right: 10px;
-
 }
 
 .article-coauthors-list-item-open{
@@ -428,9 +411,15 @@
     a {
         width: 100%;
     }
-    
+
     &:not(:last-child) {
         margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: $phablet) {
+        .article-author-link::after {
+            top: 1px;
+        }
     }
 }
 
@@ -464,6 +453,10 @@
 
 .post-content{
     padding: 160px 0 35px;
+    /*DESKTOP MEDIUM*/
+    @media screen and (max-width: $desktop_medium){
+        padding-top: 50px;
+    }
 }
 
 /**************************************ARTICLE NEXT**************************************/

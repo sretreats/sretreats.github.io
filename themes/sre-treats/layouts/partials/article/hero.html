@@ -1,12 +1,17 @@
-<section id="articleHero" class="section narrow">
+<section id="articleHero" class="wide-section">
     <div class="article-hero">
         <header class="article-header">
             <h1 class="article-hero-heading">{{ .Page.Params.Title }}</h1>
             <div class="article-hero-subtitle">
                 <div class="article-meta">
                     {{ partial "article/authors.html" . }}
+
+                    {{ $authors := partialCached "func/GetArticleAuthors" . .File.UniqueID }}
+                    <span class="article-date {{ if gt (len $authors) 1 }} multiple{{ end }}">
                     {{ .Page.Date.Format "January 2, 2006" }}
                     • {{ .ReadingTime }} min read
+                    </span>
+
                 </div>
             </div>
         </header>
