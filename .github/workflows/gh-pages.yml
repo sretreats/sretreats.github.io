@@ -25,8 +25,9 @@ jobs:
 
       - name: Deploy
         run: |
-          ls -lart
           cd public
+          pwd
+          git status
           git add .
           git commit -m "${{ github.event.head_commit.message }}"
           git push origin main
