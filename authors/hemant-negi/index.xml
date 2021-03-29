@@ -1,34 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hemant Negi on My New Hugo Site</title>
-    <link>https://sretreats.github.io/authors/hemant-negi/</link>
-    <description>Recent content in Hemant Negi on My New Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sretreats.github.io/authors/hemant-negi/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Linux know how, that must be known by SREs</title>
-      <link>https://sretreats.github.io/post/linnux/</link>
-      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://sretreats.github.io/post/linnux/</guid>
-      <description>Was your Mac rebooted recently? &amp;gt; uptime The response also shows whether CPU utilization is increasing recently:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hemant Negi on My New Hugo Site</title><link>https://sretreats.github.io/authors/hemant-negi/</link><description>Recent content in Hemant Negi on My New Hugo Site</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sretreats.github.io/authors/hemant-negi/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux know how, that must be known by SREs</title><link>https://sretreats.github.io/post/linnux/</link><pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate><guid>https://sretreats.github.io/post/linnux/</guid><description>Was your Mac rebooted recently? &amp;gt; uptime The response also shows whether CPU utilization is increasing recently:
 6:35 up 9 days, 11:56, 7 users, load averages: 2.09 2.24 2.06
-“load averages” numbers are calculations of the average system load over three periods of times: the last one-, five-, and fifteen-minute periods. These count the number of processes either using or waiting for CPU (the ready queue or run queue) increments the load number by 1.</description>
-    </item>
-    
-    <item>
-      <title>Markdown Syntax Guide is the templated version</title>
-      <link>https://sretreats.github.io/post/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sretreats.github.io/post/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo
+“load averages” numbers are calculations of the average system load over three periods of times: the last one-, five-, and fifteen-minute periods. These count the number of processes either using or waiting for CPU (the ready queue or run queue) increments the load number by 1.</description></item><item><title>Markdown Syntax Guide is the templated version</title><link>https://sretreats.github.io/post/markdown-syntax/</link><pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate><guid>https://sretreats.github.io/post/markdown-syntax/</guid><description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo
 content files, also it shows whether basic HTML elements are decorated with CSS
 in a Hugo theme.
-&lt;a href=&#34;http://google.com&#34;&gt;This is a link&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;a href="http://google.com">This is a link&lt;/a>&lt;/p></description></item></channel></rss>
