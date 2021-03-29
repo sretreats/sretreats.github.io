@@ -22,17 +22,14 @@ jobs:
 
       - name: Deploy
         run: |
-          git status
           git checkout -f --track origin/main
-          ls -lart
           $(cp *.md ../public | true)
           rm -rf *
-          ls -lart
           mv ../public/* .
-          ls -lart
+          git status
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add --all
           git commit -m "[Auto commit]${{ github.event.head_commit.message }}"
-          # git push origin main
+          git push origin main
           
