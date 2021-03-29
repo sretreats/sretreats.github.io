@@ -23,7 +23,7 @@ jobs:
       - name: Deploy
         run: |
           git status
-          git checkout --track origin/main
+          git checkout -f --track origin/main
           rm -v !(*.md|*.git)
           ls -lart
           mv ../public/* .
