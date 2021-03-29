@@ -24,11 +24,13 @@ jobs:
         run: |
           git status
           git checkout -f --track origin/main
-          rm -v !(*.md|*.git)
+          ls -lart
+          $(cp *.mds ../public | true)
+          rm -rf *
           ls -lart
           mv ../public/* .
-          ls lart
+          ls -lart
           git add --all
           git commit -m "${{ github.event.head_commit.message }}"
-          git push origin main
+          # git push origin main
           
