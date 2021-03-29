@@ -1,4 +1,4 @@
-name: github pages
+name: Publish to sretreats
 
 on:
   push:
@@ -15,20 +15,19 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          # extended: true
+        run: brew install hugo
 
       - name: Build
-        run: hugo --minify -t sre-treats
+        run: hugo --minify -t sre-treats -d ../public # write outside of git path.
 
       - name: Deploy
         run: |
-          cd public
-          pwd
-          git status
-          git add .
+          git checkout main
+          rm -v !(*.md|*.git)
+          ls -lart
+          mv ../public/* .
+          ls lart
+          git add --all
           git commit -m "${{ github.event.head_commit.message }}"
           git push origin main
           
