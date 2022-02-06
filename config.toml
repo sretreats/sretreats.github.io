@@ -1,6 +1,6 @@
 baseURL = "https://sretreats.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "SRE Treats"
 theme = "sre-treats"
 paginate = 6
 
