@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Markdown Syntax Guide is the templated version
 date: 2019-03-11
 hero: "/images/hero-2.jpg"

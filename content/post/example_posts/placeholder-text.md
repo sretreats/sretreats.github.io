@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Placeholder Text
 date: 2019-03-09
 hero: /images/hero-4.jpg
