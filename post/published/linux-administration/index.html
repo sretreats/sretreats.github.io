@@ -8,20 +8,20 @@
 <link rel=stylesheet href=/css/prism.css>
 <link rel=preconnect href=https://fonts.gstatic.com>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&display=swap" rel=stylesheet>
-<title>Posts | My New Hugo Site</title>
-<meta name=description content>
-<meta property="og:title" content="Posts | My New Hugo Site">
+<title>Linux for administrators | My New Hugo Site</title>
+<meta name=description content="User/Group/Permission Management in Linux  Users in Linux has an associated user ID called UID attached to them. A group is a collection of one or more users. A group makes it easier to share permissions among a group of users. Each group has a group ID called GID associated with it. Users can get sudo access if added to a sudo group in /etc/sudoers  Below files are of importance here">
+<meta property="og:title" content="Linux for administrators | My New Hugo Site">
 <meta property="og:site_name" content="My New Hugo Site">
-<meta property="og:description" content>
-<meta property="og:url" content="https://sretreats.github.io/post/">
+<meta property="og:description" content="User/Group/Permission Management in Linux  Users in Linux has an associated user ID called UID attached to them. A group is a collection of one or more users. A group makes it easier to share permissions among a group of users. Each group has a group ID called GID associated with it. Users can get sudo access if added to a sudo group in /etc/sudoers  Below files are of importance here">
+<meta property="og:url" content="https://sretreats.github.io/post/published/linux-administration/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://sretreats.github.io/uploads/default.jpg"><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:title content="Posts | My New Hugo Site">
-<link rel=canonical href=https://sretreats.github.io/post/>
+<meta name=twitter:title content="Linux for administrators | My New Hugo Site">
+<link rel=canonical href=https://sretreats.github.io/post/published/linux-administration/>
 <meta name=twitter:site content="@https://twitter.com/forestryio">
 <meta name=twitter:creator content="@https://twitter.com/forestryio">
-<meta name=twitter:description content>
+<meta name=twitter:description content="User/Group/Permission Management in Linux  Users in Linux has an associated user ID called UID attached to them. A group is a collection of one or more users. A group makes it easier to share permissions among a group of users. Each group has a group ID called GID associated with it. Users can get sudo access if added to a sudo group in /etc/sudoers  Below files are of importance here">
 <meta name=twitter:image content="https://sretreats.github.io/uploads/default.jpg">
 <meta property="article:published_time" content="2021-04-05T00:00:00+00:00">
 <meta property="article:updated_time" content="2021-04-05T00:00:00+00:00">
@@ -52,42 +52,360 @@ copied
 <script src=/js/toggleLogos.js></script>
 <script src=/js/toggleColors.js></script>
 <script src=/js/copyUrl.js></script>
-<section class=section relative id=Articles__Hero>
-<div class=heading-container style=max-width:px>
-<h1 class=hero-heading></h1>
+<section class="section narrow">
+<section id=articleHero class=wide-section>
+<div class=article-hero>
+<header class=article-header>
+<h1 class=article-hero-heading>Linux for administrators</h1>
+<div class=article-hero-subtitle>
+<div class=article-meta>
+<a href=/authors/hemant-negi/ class=article-author-link>
+<div class=article-author-avatar>
+<img src=/images/authors/hemant-negi.jpg>
 </div>
-<div class=subheading-container>
-<div class=bio-container>
-<a href=/authors/hemant-negi/ class=bio-link>
-<div class=bio-avatar>
-<div class=bio-avatar-inner>
-<img class=author-avatar src=/images/authors/hemant-negi.jpg>
-</div>
-</div>
-<p class=bio-text>Hemant Negi is a site reliability engineer at VMware. Coming from a software
-engineering background he has experience in building complex, large-scale,
-data-driven applications. At VMware, he is …</p>
+<strong>Hemant Negi</strong>
+<span class=hide-on-mobile>,&nbsp;</span>
 </a>
+<script src=/js/collapseAuthors.js></script>
+<span class=article-date>
+April 5, 2021
+• 7 min read
+</span>
 </div>
-<div class=grid-controls-container>
-<button id=btnGrid class=grid-button><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="tiles" fill="#000" d="M4.33337 13.8424H12.0371V5.4165H4.33337v8.4259zm0 6.7408H12.0371V15.5276H4.33337v5.0556zm9.62963.0h7.7037v-8.426H13.963v8.426zm0-15.1667v5.0556h7.7037V5.4165H13.963z"/></svg>
-</button>
-<button id=btnRows class=grid-button><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="rows" fill="#000" d="M4.33331 15.1665H8.41174V10.8332H4.33331v4.3333zm0 5.4167H8.41174V16.2498H4.33331v4.3334zm0-10.83336H8.41174V5.4165H4.33331V9.74984zM9.43135 15.1665H21.6666V10.8332H9.43135v4.3333zm0 5.4167H21.6666V16.2498H9.43135v4.3334zm0-15.1667V9.74984H21.6666V5.4165H9.43135z"/></svg>
-</button>
 </div>
+</header>
 </div>
 </section>
-<script src=/js/toggleLayout.js></script>
-<section classname="section narrow">
-<section class="section nartrow">
-<div id=articlesList class="articles-list-container show-details">
+<aside id=progressBar class=aside-container>
+<div class=aside-align>
+<div>
+<div class=overlap-container>
+</div>
+</div>
+</div>
+<div class=progress-container tabindex={-1}>
+<div class=track-line aria-hidden=true>
+<div id=progressIndicator class=progress-line></div>
+</div>
+</div>
+</aside>
+<article id=articleContent class=post-content style=position:relative>
+<h2 id=usergrouppermission-management-in-linux>User/Group/Permission Management in Linux</h2>
+<ul>
+<li>Users in Linux has an associated user ID called UID attached to them.</li>
+<li>A group is a collection of one or more users. A group makes it easier to share
+permissions among a group of users.</li>
+<li>Each group has a group ID called GID associated with it.</li>
+<li>Users can get sudo access if added to a sudo group in <code>/etc/sudoers</code></li>
+</ul>
+<p><strong>Below files are of importance here</strong></p>
+<h3 id=1-etcpasswd>1. <code>/etc/passwd</code></h3>
+<p>Stores the user name, the uid, the gid, the home directory, the login shell etc</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>~ ❯ cat /etc/passwd
+nobody:x:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:x:0:0:System Administrator:/var/root:/bin/sh
+daemon:x:1:1:System Services:/var/root:/usr/bin/false
+</code></pre></div><p>Each field in a passwd entry is separated with &ldquo;:&rdquo; colon characters, and are as
+follows:</p>
+<ul>
+<li>Username, up to 8 characters. Case-sensitive, usually all lowercase.</li>
+<li>An &ldquo;x&rdquo; in the password field. Passwords are stored in the <code>/etc/shadow</code> file.</li>
+<li>Numeric user id. This is assigned by the <code>adduser</code> script. Unix uses this
+field, plus the following group field, to identify which files belong to the
+user.</li>
+<li>Numeric group id. Red Hat uses group id&rsquo;s in a fairly unique manner for
+enhanced file security. Usually the group id will match the user id.</li>
+<li>Full name of user, can be a large name (30 chars).</li>
+<li>User&rsquo;s home directory. Usually /home/username.</li>
+<li>Path to user&rsquo;s &ldquo;shell account&rdquo; this will be default shell for the user.</li>
+</ul>
+<h3 id=2-etcshadow>2. <code>/etc/shadow</code></h3>
+<p>Stores the password associated with the users.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>~ ❯ cat /etc/shadow
+linuxize:$6$zHvrJMa5Y690smbQ$z5zdL...:18009:0:120:7:14::
+smithj:Ep6mckrOLChF.:10063:0:99999:7:::
+</code></pre></div><p>Each entry in this file is separated by : there are 9 data points here.</p>
+<ol>
+<li>username</li>
+<li>password encrypted with SHA-512 (the password is truncated for better readability).</li>
+<li>password last changed date (number of days since epoch.)</li>
+<li>password expiry age in days. 0 means no expiry.</li>
+<li>password must be changed after days.</li>
+<li>user will receive a warning message days before the password expiration date.</li>
+<li>If the user doesn’t attempt to login to the system 14 days after the password
+is expired, the account will be disabled.</li>
+<li>account expiration date</li>
+<li>ignored for future use</li>
+</ol>
+<h3 id=3-etcgroup>3. <code>/etc/group</code></h3>
+<p>Stores information about different groups on the system</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>~ ❯ cat /etc/group
+certusers:x:29:root,_jabber,_postfix,_cyrus,_calendar,_dovecot
+wheel:x:0:root
+</code></pre></div><p>Each row in this file has 4 data points separated with :</p>
+<ol>
+<li>Group name - commands like ls reads group name from here.</li>
+<li>Password - Generally password is not used, hence it is empty/blank.</li>
+<li>Group ID (GID)</li>
+<li>Group List - List of usernames member of this group.</li>
+</ol>
+<p><strong>Commands used to perform actions on users/groups</strong></p>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>description</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>useradd</td>
+<td>Creates a new user</td>
+<td><code>useradd hdev -s /bin/zsh -G sre</code></td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>Adds/modifies passwords interactively</td>
+<td><code>passwd hdev</code></td>
+</tr>
+<tr>
+<td>usermod</td>
+<td>Modifies attributes of user</td>
+<td><code>usermod hdev -s /bin/bash</code></td>
+</tr>
+<tr>
+<td>userdel</td>
+<td>Deletes an user</td>
+<td><code>userdel hdev</code></td>
+</tr>
+<tr>
+<td>groupadd</td>
+<td>Creates new group</td>
+<td><code>groupadd sre</code></td>
+</tr>
+<tr>
+<td>groupmod</td>
+<td>Modifies attributes of a group</td>
+<td><code>groupmod sre -n new-name</code></td>
+</tr>
+<tr>
+<td>groupdel</td>
+<td>Deletes a group</td>
+<td><code>groupdel sre</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=4-etcsudoers>4. <code>/etc/sudoers</code></h3>
+<p>This file contains the name of groups whose users can invoke sudo. Also contains
+rules that users must follow when running the sudo command. For example, root
+is allowed to run any commands from anywhere.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>~ ❯ sudo cat /etc/sudoers
+<span style=color:#75715e># root and users in group wheel can run anything on any machine as any user</span>
+root		ALL <span style=color:#f92672>=</span> <span style=color:#f92672>(</span>ALL<span style=color:#f92672>)</span> ALL
+</code></pre></div><p>We can add a user to <code>root</code> group to grant him sudo access. eg.
+<code>usermod -a -G root hdev</code></p>
+<h3 id=5-file-permissions>5. File permissions</h3>
+<p>In a linux based OS, each file and directory is assigned access permissions for
+the owner of the file, the members of a group of related users and everybody
+else(others).</p>
+<p>File permissions, size, user, group etc are stored in Inodes.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>~ ❯ l ~/projects
+drwxr-xr-x    <span style=color:#ae81ff>4</span> hdev  staff   128B Apr  <span style=color:#ae81ff>4</span>  <span style=color:#ae81ff>2019</span> K8s Deployables
+</code></pre></div><p>lets break down those rows and see what information it represents.</p>
+<table>
+<thead>
+<tr>
+<th>Char</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code></td>
+<td>first char denotes file type. <code>d</code> is for directory <code>-</code> is for regular files</td>
+</tr>
+<tr>
+<td><code>rwx</code></td>
+<td>next three char denotes the file owners permission as read(r), write(w), execute(x)</td>
+</tr>
+<tr>
+<td><code>r-x</code></td>
+<td>these denotes permissions for groups members (read and execute)</td>
+</tr>
+<tr>
+<td><code>r-x</code></td>
+<td>these denotes permissions for all other users (read and execute)</td>
+</tr>
+<tr>
+<td><code>hdev</code></td>
+<td>is the owner&rsquo;s username</td>
+</tr>
+<tr>
+<td><code>staff</code></td>
+<td>Name of group owner of file</td>
+</tr>
+</tbody>
+</table>
+<p>We can think of permission as a series of bits with 1 representing True or
+allowed and 0 representing False or not allowed.</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>rwx</th>
+<th>Binary</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read, write and execute</td>
+<td><code>rwx</code></td>
+<td>111</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Read and write</td>
+<td><code>rw-</code></td>
+<td>110</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Read and execute</td>
+<td><code>r-x</code></td>
+<td>101</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Read only</td>
+<td><code>r--</code></td>
+<td>100</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Write and execute</td>
+<td><code>-wx</code></td>
+<td>011</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Write only</td>
+<td><code>-w-</code></td>
+<td>010</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Execute only</td>
+<td><code>--x</code></td>
+<td>001</td>
+<td>1</td>
+</tr>
+<tr>
+<td>None</td>
+<td><code>---</code></td>
+<td>000</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Change these attributes of a file as</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>❯ chmod <span style=color:#ae81ff>644</span> test_file.py
+❯ ls -l test_file.py
+-rw-r--r--  <span style=color:#ae81ff>1</span> hdev  staff  <span style=color:#ae81ff>0</span> Apr  <span style=color:#ae81ff>6</span> 11:51 test_file.py
+❯ <span style=color:#75715e># can use it like below</span>
+❯ chmod u<span style=color:#f92672>=</span>rwx test_file.py  <span style=color:#75715e># set user to rwx</span>
+❯ chmod g<span style=color:#f92672>=</span>-w- test_file.py  <span style=color:#75715e># set group to -w-</span>
+❯ chmod o<span style=color:#f92672>=</span>-w- test_file.py  <span style=color:#75715e># set others to -w-</span>
+❯ chmod a<span style=color:#f92672>=</span>-w- test_file.py  <span style=color:#75715e># set all to -w-</span>
+❯ sudo chown root test_file.py          <span style=color:#75715e># Change owner to root</span>
+❯ sudo chown root:admin test_file.py    <span style=color:#75715e># change owner anc group both</span>
+❯ sudo chgrp admin test_file.py         <span style=color:#75715e># cahnge group to admin</span>
+</code></pre></div><h3 id=6-managing-remote-machines>6. Managing remote machines</h3>
+<ul>
+<li>SSH login to a remote machine
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>ssh -i /path/to/privatekey username@42.12.23.3
+</code></pre></div></li>
+<li>Remote command execution via ssh
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>ssh -i /path/to/privatekey username@42.12.23.3 <span style=color:#e6db74>&#39;ps aux | less&#39;</span>
+</code></pre></div></li>
+<li>Copy file to remote
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>scp -i /path/to/privatekey sample_file username@42.12.23.3:/path/in/remote/sample_file
+</code></pre></div></li>
+</ul>
+<h3 id=7-process-mangement>7. Process mangement</h3>
+<ul>
+<li>List running processes by <code>ps</code> (process status) and using <code>top</code>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>❯ ps aux
+❯ ps -i <span style=color:#ae81ff>23</span>
+❯ top      
+</code></pre></div></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>uname
+id
+uptime
+groups
+users
+</code></pre></div><p>Memory Management
+In this section, we will study about some useful commands that can be used to view information about the system memory.</p>
+<p>free
+The free command is used to display the memory usage of the system. The command displays the total free and used space available in the RAM along with space occupied by the caches/buffers.</p>
+<p>free command by default shows the memory usage in kilobytes. We can use an additional argument to get the data in human-readable format.</p>
+<p>vmstat
+The vmstat command can be used to display the memory usage along with additional information about io and cpu usage.</p>
+<p>Checking Disk Space
+In this section, we will study about some useful commands that can be used to view disk space on Linux.</p>
+<p>df (disk free)
+The df command is used to display the free and available space for each mounted file system.</p>
+<p>du (disk usage)
+The du command is used to display disk usage of files and directories on the system.</p>
+<p>The below command can be used to display the top 5 largest directories in the root directory.</p>
+<p>Daemons
+A computer program that runs as a background process is called a daemon. Traditionally, the name of daemon processes ended with d - sshd, httpd etc. We cannot interact with a daemon process as they run in the background.</p>
+<p>Services and daemons are used interchangeably most of the time.</p>
+<p>Systemd
+Systemd is a system and service manager for Linux operating systems. Systemd units are the building blocks of systemd. These units are represented by unit configuration files.</p>
+<p>The below examples shows the unit configuration files available at /usr/lib/systemd/system which are distributed by installed RPM packages. We are more interested in the configuration file that ends with service as these are service units.</p>
+<p>Managing System Services
+Service units end with .service file extension. Systemctl command can be used to start/stop/restart the services managed by systemd.</p>
+<p>Command Description
+systemctl start name.service Starts a service
+systemctl stop name.service Stops a service
+systemctl restart name.service Restarts a service
+systemctl status name.service Check the status of a service
+systemctl reload name.service Reload the configuration of a service
+Logs
+In this section, we will talk about some important files and directories which can be very useful for viewing system logs and applications logs in Linux. These logs can be very useful when you are troubleshooting on the system.</p>
+</article>
+<section id=articleNext class=wide-section>
+<h3 class=footer-next-heading>More articles from My New Hugo Site</h3>
+<div class=footer-spacer></div>
+<div class=next-articles-grid numberofarticles={numberOfArticles}>
 <div class=post-row>
-<a href=/post/published/linux-administration/ class=article-link id=article-link-bigger>
-<div class=article-data-outer>
+<a href=/post/published/linnux/ class=article-link id=article-link-bigger>
+<div>
+<div class=image-container>
+<img src=/images/posts/linux-know-how-sres.jpg class=article-image>
+</div>
+<div>
+<h2 class=article-title>
+Linux know how, that must be known by SREs
+</h2>
+<p class=article-excerpt>
+Linux know how, that must be known by SREs
+</p>
+<div class=article-metadata>
+March 1, 2021 · 1 min read
+</div>
+</div>
+</div>
+</a>
+<a href=/post/published/linux-administration/ class=article-link>
+<div>
 <div class=image-container>
 <img src class=article-image>
 </div>
-<div class=article-data>
+<div>
 <h2 class=article-title>
 Linux for administrators
 </h2>
@@ -95,25 +413,7 @@ Linux for administrators
 linux administrators
 </p>
 <div class=article-metadata>
-April 5, 2021 • 7 min read
-</div>
-</div>
-</div>
-</a>
-<a href=/post/published/linnux/ class=article-link>
-<div class=article-data-outer>
-<div class=image-container>
-<img src=/images/posts/linux-know-how-sres.jpg class=article-image>
-</div>
-<div class=article-data>
-<h2 class=article-title>
-Linux know how, that must be known by SREs
-</h2>
-<p class=article-excerpt>
-Linux know how, that must be known by SREs
-</p>
-<div class=article-metadata>
-March 1, 2021 • 1 min read
+April 5, 2021 · 7 min read
 </div>
 </div>
 </div>
@@ -121,10 +421,8 @@ March 1, 2021 • 1 min read
 </div>
 </div>
 </section>
-<div class=articles-paginator>
-</div>
 </section>
-<div class=articles-gradient></div>
+<script src=/js/progressBar.js></script>
 <div class=footer-gradient></div>
 <div class="section narrow">
 <div class=footer-hr></div>
