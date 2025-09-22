@@ -3,7 +3,7 @@ name: Publish to sretreats
 on:
   push:
     branches:
-      - master  # Set a branch to deploy
+      - main  # Set a branch to deploy
 
 jobs:
   deploy:
@@ -15,18 +15,13 @@ jobs:
         run: apt-get install hugo
 
       - name: Build
-        run: hugo --minify -t sre-treats -d ../public # write outside of git path.
+        run: hugo --minify -t sre-treats -d public
 
       - name: Deploy
-        run: |
-          git checkout -f --track origin/main
-          $(cp *.md ../public | true)
-          rm -rf *
-          mv ../public/* .
-          git status
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git add --all
-          git commit -m "[Auto commit]${{ github.event.head_commit.message }}"
-          git push origin main
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: main
+          cname: sre-treats.github.io
           
