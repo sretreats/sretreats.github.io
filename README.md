@@ -1,4 +1,4 @@
-sretreats.github.io
+[sretreats.github.io](sretreats.github.io)
 
 A statically generated site by Hugo
 

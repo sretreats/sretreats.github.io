@@ -4,6 +4,9 @@
       <div class="footer-container">
         <div class="footer-text">
           © {{ dateFormat "2006" now }} {{ .Site.Title }}
+          <div class="footer-links">
+            <a href="/about/">About</a>
+          </div>
         </div>
         {{ partial "social-links/social-links.html" . }}
     </div>

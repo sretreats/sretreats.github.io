@@ -1,11 +1,33 @@
 ---
-title: About
+title: About SRE Treats
+# hero: "/images/posts/linux-know-how-sres.jpg"
+excerpt: Linux know how, that must be known by SREs
 ---
+![test](/images/posts/linux-know-how-sres.jpg)
+Welcome to SRE Treats – your go-to space for learning, exploring, and mastering the world of Site Reliability Engineering (SRE).
 
-Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui.
+This site is dedicated to sharing practical insights, proven techniques, and real-world experiences from working as an SRE. Whether you’re new to reliability engineering or an experienced engineer looking to sharpen your skills, SRE Treats is designed to provide valuable resources and knowledge that help you build, operate, and scale reliable systems.
 
-Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+### What You’ll Find Here
 
-Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+**At SRE Treats**, you’ll discover articles, guides, and tutorials covering:
+- **Core SRE practices** – incident management, monitoring, alerting, and SLIs/SLOs/SLAs.
+- **Public cloud platforms** – tips, architectures, and best practices for AWS, GCP, and Azure.
+- **Infrastructure & automation** – Infrastructure as Code, CI/CD pipelines, and configuration management.
+- **Software architecture** – patterns and approaches for building scalable, fault-tolerant systems.
+- **Tools & techniques** – hands-on guidance with Kubernetes, Docker, Terraform, observability stacks, and more.
 
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+### Why SRE Treats?
+
+The idea behind this site is simple: **reliability is an engineering discipline worth mastering**. By combining lessons learned from production systems, industry best practices, and modern tooling, SRE Treats helps engineers adopt a reliability-first mindset.
+
+If you’re passionate about uptime, performance, scalability, and building systems that teams can trust, you’ll find plenty of useful content here.
+
+### Who is This Site For?
+
+- Aspiring SREs who want to break into the role.
+- Software engineers looking to level up on operational excellence.
+- DevOps practitioners exploring modern reliability practices.
+- Anyone interested in building resilient, cloud-native systems.
+
+**SRE Treats** is all about sharing knowledge, solving problems, and making reliability approachable. Think of it as a collection of “treats” for engineers who care about keeping systems healthy, efficient, and scalable.

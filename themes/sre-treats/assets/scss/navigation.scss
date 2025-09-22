@@ -39,6 +39,19 @@
     border-bottom: 1px solid var(--horizontalRule);
 }
 
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 /*TABLET*/
 @media screen and (max-width: 735px){
     .footer-hr{

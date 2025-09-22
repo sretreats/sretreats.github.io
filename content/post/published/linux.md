@@ -5,7 +5,6 @@ hero: "/images/posts/linux-know-how-sres.jpg"
 excerpt: Linux know how, that must be known by SREs
 authors:
   - Hemant Negi
-  - Hdev
 ---
 
 
@@ -24,9 +23,3 @@ The response also shows whether CPU utilization is increasing recently:
 In a system with four CPU cores, a load average of 3.73 would indicate that there were, on average, 3.73 processes ready to run, and each one could be scheduled into a CPU.
 
 
-
-There are some test suits that neeeds to be definer
-
-
-
-Hello world this is a change!
