@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Hugo
-        run: brew install hugo
+        run: apt-get install hugo
 
       - name: Build
         run: hugo --minify -t sre-treats -d ../public # write outside of git path.
