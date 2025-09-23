@@ -4,6 +4,6 @@ hero:
   subHeading: A cookbook for Site Reliability Engineers
   maxWidthPX: 652
 seo:
-  image: /images/hero-2.jpg
+  image: /images/site/site.png
 ---
 # SRE is “what happens when you ask a software engineer to design an operations function.”

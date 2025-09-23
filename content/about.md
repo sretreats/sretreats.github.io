@@ -1,10 +1,11 @@
 ---
-title: About SRE Treats
-# hero: "/images/posts/linux-know-how-sres.jpg"
-excerpt: Linux know how, that must be known by SREs
+pageType: site
+hero: "/images/site/site.png"
+description: "Learn more about SRE Treats, a blog dedicated to Site Reliability Engineering (SRE) best practices, tutorials, and insights. Find articles on Linux administration, cloud infrastructure, automation, and more."
 ---
-![test](/images/posts/linux-know-how-sres.jpg)
-Welcome to SRE Treats – your go-to space for learning, exploring, and mastering the world of Site Reliability Engineering (SRE).
+
+
+Welcome to **SRE Treats** – your go-to space for learning, exploring, and mastering the world of Site Reliability Engineering (SRE).
 
 This site is dedicated to sharing practical insights, proven techniques, and real-world experiences from working as an SRE. Whether you’re new to reliability engineering or an experienced engineer looking to sharpen your skills, SRE Treats is designed to provide valuable resources and knowledge that help you build, operate, and scale reliable systems.
 

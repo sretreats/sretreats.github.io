@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="section narrow">
+<section class="section narrow {{ if eq .Params.pageType "site" }}site-page-content{{ end }}">
 
     {{ partial "page/hero.html" . }}
 

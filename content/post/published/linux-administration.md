@@ -1,15 +1,16 @@
 ---
-title: Linux for administrators 
-date: 2021-04-05
-excerpt: linux administrators
-featured: true
+title: "Linux Administration Essentials"
+date: 2025-09-23
+hero: "/images/posts/linux-administration.png"
+excerpt: "A comprehensive guide covering essential Linux commands for memory, disk, and service management, along with log analysis techniques for system administrators."
 authors:
   - Hemant Negi
 ---
 
 
+
 ## User/Group/Permission Management in Linux
-- Users in Linux has an associated user ID called UID attached to them.
+- Users in Linux has an associated user ID called UID.
 - A group is a collection of one or more users. A group makes it easier to share
   permissions among a group of users.
 - Each group has a group ID called GID associated with it.
@@ -167,71 +168,92 @@ Change these attributes of a file as
     ```
 
 
-```bash
-uname
-id
-uptime
-groups
-users
-```
 
-
-
-Memory Management
+## Memory Management
 In this section, we will study about some useful commands that can be used to view information about the system memory.
 
-free
-The free command is used to display the memory usage of the system. The command displays the total free and used space available in the RAM along with space occupied by the caches/buffers.
+### free
+The `free` command is used to display the memory usage of the system. The command displays the total free and used space available in the RAM along with space occupied by the caches/buffers. By default, it shows the memory usage in kilobytes, but using the `-h` flag makes it human-readable.
+
+```bash
+❯ free -h
+              total        used        free      shared  buff/cache   available
+Mem:          3.8Gi       1.1Gi       1.3Gi        12Mi       1.4Gi       2.4Gi
+Swap:         2.0Gi          0B       2.0Gi
+```
+This shows a system with 3.8GB of RAM, with 1.1GB used and 2.4Gi available for new applications.
+
+### vmstat
+The `vmstat` command can be used to display the memory usage along with additional information about I/O and CPU usage.
+
+```bash
+❯ vmstat 1 5
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 2  0      0 1353192 181376 1284784    0    0     8    25   123  211  1  1 98  0  0
+ 0  0      0 1353192 181376 1284784    0    0     0     0   140  240  0  0 100 0  0
+ 0  0      0 1353192 181376 1284784    0    0     0     0   130  225  0  0 100 0  0
+ 0  0      0 1353192 181376 1284784    0    0     0     0   128  221  0  0 100 0  0
+ 0  0      0 1353192 181376 1284784    0    0     0     0   135  231  0  0 100 0  0
+```
+This command shows statistics every second for 5 seconds. The columns provide information about processes (`procs`), memory, swap, I/O, system, and CPU activity. It's useful for a quick glance at system performance.
 
 
+## Systemd
+Systemd is a system and service manager for Linux operating systems. Systemd units are the building blocks of `systemd`. These units are represented by unit configuration files located in directories like `/usr/lib/systemd/system`. The configuration files that end with `.service` are of particular interest as these define services.
 
-free command by default shows the memory usage in kilobytes. We can use an additional argument to get the data in human-readable format.
+### Managing System Services
+Service units end with a `.service` file extension. The `systemctl` command can be used to start, stop, and restart the services managed by `systemd`.
 
+| Command                      | Description                                |
+| ---------------------------- | ------------------------------------------ |
+| `systemctl start name.service` | Starts a service                           |
+| `systemctl stop name.service`  | Stops a service                            |
+| `systemctl restart name.service` | Restarts a service                         |
+| `systemctl status name.service`  | Check the status of a service              |
+| `systemctl reload name.service`  | Reload the configuration of a service      |
+| `systemctl enable name.service`  | Enable a service to start on boot        |
+| `systemctl disable name.service` | Disable a service from starting on boot    |
 
+For example, to check the status of the SSH daemon:
+```bash
+❯ systemctl status sshd
+● sshd.service - OpenSSH server daemon
+     Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2025-09-23 08:00:00 UTC; 1 weeks 1 days ago
+...
+```
+The output shows the service is `loaded`, `enabled` (starts on boot), and `active (running)`.
 
-vmstat
-The vmstat command can be used to display the memory usage along with additional information about io and cpu usage.
-
-
-
-Checking Disk Space
-In this section, we will study about some useful commands that can be used to view disk space on Linux.
-
-df (disk free)
-The df command is used to display the free and available space for each mounted file system.
-
-
-
-du (disk usage)
-The du command is used to display disk usage of files and directories on the system.
-
-
-
-The below command can be used to display the top 5 largest directories in the root directory.
-
-
-
-Daemons
-A computer program that runs as a background process is called a daemon. Traditionally, the name of daemon processes ended with d - sshd, httpd etc. We cannot interact with a daemon process as they run in the background.
-
-Services and daemons are used interchangeably most of the time.
-
-Systemd
-Systemd is a system and service manager for Linux operating systems. Systemd units are the building blocks of systemd. These units are represented by unit configuration files.
-
-The below examples shows the unit configuration files available at /usr/lib/systemd/system which are distributed by installed RPM packages. We are more interested in the configuration file that ends with service as these are service units.
-
-
-
-Managing System Services
-Service units end with .service file extension. Systemctl command can be used to start/stop/restart the services managed by systemd.
-
-Command	Description
-systemctl start name.service	Starts a service
-systemctl stop name.service	Stops a service
-systemctl restart name.service	Restarts a service
-systemctl status name.service	Check the status of a service
-systemctl reload name.service	Reload the configuration of a service
-Logs
+## Logs
 In this section, we will talk about some important files and directories which can be very useful for viewing system logs and applications logs in Linux. These logs can be very useful when you are troubleshooting on the system.
+
+### Key Log Files and Directories
+*   `/var/log/syslog` or `/var/log/messages`: Contains global system logs.
+*   `/var/log/auth.log` or `/var/log/secure`: Contains authentication logs.
+*   `/var/log/dmesg`: Contains kernel ring buffer messages. You can also view this with the `dmesg` command.
+*   Application-specific logs like `/var/log/nginx/` or `/var/log/apache2/`.
+
+### Using `journalctl`
+On modern systems using `systemd`, `journalctl` is the primary tool for querying logs.
+
+To view all logs, with the newest entries at the bottom (you can navigate with arrow keys):
+```bash
+❯ journalctl
+```
+
+To follow logs in real-time:
+```bash
+❯ journalctl -f
+```
+
+To view logs for a specific service:
+```bash
+❯ journalctl -u sshd
+-- Logs begin at Tue 2025-09-22 08:00:00 UTC, end at Tue 2025-09-23 17:35:00 UTC. --
+Sep 23 16:00:01 my-server sshd[1234]: Server listening on 0.0.0.0 port 22.
+...
+Sep 23 16:05:10 my-server sshd[5678]: Accepted publickey for shemant from 192.168.1.100 port 54321 ssh2: RSA SHA256:AbCdEf...
+```
+This command shows all log entries for the `sshd` service, which is very useful for debugging service-specific issues.
 
